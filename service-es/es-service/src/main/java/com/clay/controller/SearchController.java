@@ -71,11 +71,6 @@ public class SearchController implements EsServiceClient {
             System.out.println(name+"=" + request.getHeader(name));
         }
         System.out.println("========================>>>>>   服务调用进来");
-        try {
-            Thread.sleep(3000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return searchService.sugget(prefix);
     }
 
