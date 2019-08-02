@@ -1,0 +1,56 @@
+//POST /lianjia/house_source/_mapping
+{
+  "properties":{
+    "id":{
+      "type":"integer"
+    },
+    "title":{
+      "type":"text",
+      "analyzer": "ik_smart",
+      "search_analyzer":"ik_smart"
+    },
+    "region":{
+      "type":"text",
+      "analyzer": "ik_smart",
+      "search_analyzer":"ik_smart"
+    },
+    "region1":{
+      "type":"text",
+      "analyzer": "ik_smart",
+      "search_analyzer":"ik_smart"
+    },
+    "src":{
+      "type":"text"
+    },
+    "area":{
+      "type":"text"
+    },
+    "orientations":{
+      "type":"text"
+    },
+    "apartment":{
+      "type":"text"
+    },
+    "tags":{
+      "type":"text",
+      "analyzer": "ik_smart",
+      "search_analyzer":"ik_smart"
+    },
+    "min_price":{
+      "type":"integer"
+    },
+    "max_price":{
+      "type":"integer"
+    },
+    "publish_man":{
+      "type":"text"
+    },
+    "publish_time":{
+      "type":"integer"
+    },
+    "room_left":{
+      "type":"text"
+    }
+
+  }
+}

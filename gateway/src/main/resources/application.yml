@@ -1,0 +1,37 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    gateway:
+      routes:
+#        - id: route_es_service
+#          uri: lb://es-service
+#          predicates:
+#            - Path=/es-service/**
+#          filters:
+#            - StripPrefix=1
+
+#        - id: route_city_service
+#          uri: lb://city-service
+#          predicates:
+#            - Path=/city-service/**
+#          filters:
+#            - StripPrefix=1
+
+
+      discovery:
+        locator:
+          # 是否可以通过其他服务的serviceId来转发到具体的服务实例。默认为false
+          # 为true,自动创建路由,路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问
+          enabled: true
+          lower-case-service-id: true
+
+    zookeeper:
+      connect-string: 127.0.0.1:2181
+      discovery:
+        enabled: true
+        register: true
